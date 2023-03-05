@@ -54,4 +54,4 @@ if __name__ == "__main__":
     D = librosa.stft(y)
     D_stretched = phase_vocoder(D, rate=args.time_stretch_ratio)
     y_stretched = librosa.istft(D_stretched)
-    soundfile.write(args.output, y_stretched, sr)
+    sf.write(args.output, y_stretched, sr)
